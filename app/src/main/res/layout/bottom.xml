@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/teacher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_list_black_24dp"
+        android:layout_weight="1"
+        android:textSize="10sp"
+        android:background="#00000000"
+        android:text="1对1"
+        />
+    <TextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="0.5"/>
+    <Button
+        android:id="@+id/course"
+        android:textSize="10sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_book_black_24dp"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:text="我的课程"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"/>
+
+    <Button
+        android:id="@+id/account"
+        android:layout_width="0dp"
+        android:textSize="10sp"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_account_box_black_24dp"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:text="我"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+</LinearLayout>
