@@ -1,10 +1,11 @@
 package Layout;
 
-import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.AttributeSet;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
-import android.widget.LinearLayout;
+import android.view.View;
+import android.view.ViewGroup;
 import  com.example.androidproject.R;
 
 
@@ -12,9 +13,11 @@ import  com.example.androidproject.R;
  * Created by MECHREVO on 2018/4/26.
  */
 
-public class TitleLayout extends LinearLayout {
-    public TitleLayout(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        LayoutInflater.from(context).inflate(R.layout.title,this);
+public class TitleLayout extends Fragment {
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.title,container,false);
+        return view;
     }
 }

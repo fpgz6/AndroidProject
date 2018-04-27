@@ -1,24 +1,29 @@
 package Layout;
 
-import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.AttributeSet;
-import android.util.Log;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.view.ViewGroup;
+import  com.example.androidproject.R;
 
-import com.example.androidproject.*;
 
 
 /**
  * Created by MECHREVO on 2018/4/26.
  */
 
-public class BottomLayout extends LinearLayout implements View.OnClickListener{
-    private Button teacher;
+public class BottomLayout extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.bottom,container,false);
+        return view;
+    }
+
+    /*private Button teacher;
     private Button course;
     private Button account;
     private MainActivity mainActivity;
@@ -60,5 +65,5 @@ public class BottomLayout extends LinearLayout implements View.OnClickListener{
             default:break;
         }
 
-    }
+    }*/
 }

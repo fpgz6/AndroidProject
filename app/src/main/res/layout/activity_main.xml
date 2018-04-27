@@ -7,20 +7,24 @@
     >w
 
     <!--标题和搜索按钮-->
-    <Layout.TopLayout
+    <fragment
+        android:id="@+id/top"
+        android:name="Layout.TopLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"></Layout.TopLayout>
-    <Layout.TitleLayout
+        android:layout_weight="0.5"/>
+    <fragment
+        android:id="@+id/title"
+        android:name="Layout.TitleLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></Layout.TitleLayout>
+        android:layout_weight="1"/>
 
     <!--分割线-->
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#22000000"></View>
+        android:background="#22000000"/>
 
 
     <!--内容页-->
@@ -35,12 +39,14 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#22000000"></View>
+        android:background="#22000000"/>
 
     <!--底部-->
-    <Layout.BottomLayout
-        android:layout_width="fill_parent"
+    <fragment
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:name="Layout.BottomLayout"
         android:layout_height="0dp"
-        android:layout_weight="1.1"></Layout.BottomLayout>
+        android:layout_weight="1.1"/>
 
 </LinearLayout>
