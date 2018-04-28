@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         search.setOnClickListener(this);
         replaceFragment(new ContentTeacherLayout());
         replaceTitle(new TitleLayout());
-       teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_face2_orange_a700_24dp));
+       teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_supervisor_account_orange2_a700_24dp));
        text_teacher.setTextColor(Color.parseColor("#EE7700"));
     }
    /* public void changeFragmentTeacher(){
@@ -92,9 +92,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("woaini","teacher");
                 replaceFragment(new ContentTeacherLayout());
                 replaceTitle(new TitleLayout());
-                teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_face2_orange_a700_24dp));
-                course.setImageDrawable(getResources().getDrawable(R.drawable.ic_face1_grey_500_24dp));
-                account.setImageDrawable(getResources().getDrawable(R.drawable.ic_face1_grey_500_24dp));
+                teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_supervisor_account_orange2_a700_24dp));
+                course.setImageDrawable(getResources().getDrawable(R.drawable.ic_book1_grey_500_24dp));
+                account.setImageDrawable(getResources().getDrawable(R.drawable.ic_perm_identity1_grey_500_24dp));
                 text_teacher.setTextColor(Color.parseColor("#EE7700"));
                 text_course.setTextColor(Color.parseColor("#888888"));
                 text_account.setTextColor(Color.parseColor("#888888"));
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("woaini","course");
                 replaceFragment(new ContentCourseLayout());
                 replaceTitle(new TitleCourseLayout());
-                teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_face1_grey_500_24dp));
-                course.setImageDrawable(getResources().getDrawable(R.drawable.ic_face2_orange_a700_24dp));
-                account.setImageDrawable(getResources().getDrawable(R.drawable.ic_face1_grey_500_24dp));
+                teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_supervisor_account1_grey_500_24dp));
+                course.setImageDrawable(getResources().getDrawable(R.drawable.ic_book2_orange_a700_24dp));
+                account.setImageDrawable(getResources().getDrawable(R.drawable.ic_perm_identity1_grey_500_24dp));
                 text_teacher.setTextColor(Color.parseColor("#888888"));
                 text_course.setTextColor(Color.parseColor("#EE7700"));
                 text_account.setTextColor(Color.parseColor("#888888"));
@@ -113,9 +113,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.account:
                 Log.d("woaini","account");
                 replaceFragment(new ContentAccountLayout());
-                teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_face1_grey_500_24dp));
-                course.setImageDrawable(getResources().getDrawable(R.drawable.ic_face1_grey_500_24dp));
-                account.setImageDrawable(getResources().getDrawable(R.drawable.ic_face2_orange_a700_24dp));
+                teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_supervisor_account1_grey_500_24dp));
+                course.setImageDrawable(getResources().getDrawable(R.drawable.ic_book1_grey_500_24dp));
+                account.setImageDrawable(getResources().getDrawable(R.drawable.ic_perm_identity2_orange_a700_24dp));
                 text_teacher.setTextColor(Color.parseColor("#888888"));
                 text_course.setTextColor(Color.parseColor("#888888"));
                 text_account.setTextColor(Color.parseColor("#EE7700"));
