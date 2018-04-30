@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.account:
                 Log.d("woaini","account");
                 replaceFragment(new ContentAccountLayout());
+                replaceTitle(new TitleAccountLayout());
                 teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_supervisor_account1_grey_500_24dp));
                 course.setImageDrawable(getResources().getDrawable(R.drawable.ic_book1_grey_500_24dp));
                 account.setImageDrawable(getResources().getDrawable(R.drawable.ic_perm_identity2_orange_a700_24dp));
