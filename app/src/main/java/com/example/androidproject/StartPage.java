@@ -10,7 +10,7 @@ package com.example.androidproject;
 
 public class  StartPage extends Activity{
 
-    private static int SPLASH_DISPLAY_LENGHT= 3000;    //延迟3秒
+    private static int SPLASH_DISPLAY_LENGHT= 2000;    //延迟3秒
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

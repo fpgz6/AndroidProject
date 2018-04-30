@@ -16,9 +16,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import Calendar.*;
 import Layout.*;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener/*,NewCalendar.NewCalendarListener*/{
 
     private ImageButton teacher;
     private ImageButton course;
@@ -38,8 +43,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         init();
 
+      /*  NewCalendar calendar =  findViewById(R.id.newCalendar);
+        calendar.listener = this;*/
+
 
     }
+    /*public void onItemLongPress(Date day) {
+        DateFormat df = SimpleDateFormat.getDateInstance();
+        Toast.makeText(this,df.format(day),Toast.LENGTH_SHORT).show();
+    }*/
+
+
     private void init() {
         text_teacher = findViewById(R.id.text_teacher);
         text_course = findViewById(R.id.text_course);
