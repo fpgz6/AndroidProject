@@ -20,7 +20,7 @@ public class  StartPage extends Activity{
         setContentView(R.layout.start_page);
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                Intent intent = new Intent(StartPage.this, MainActivity.class);
+                Intent intent = new Intent(StartPage.this, ChoiceOption.class);
                 startActivity(intent);
                 StartPage.this.finish();   //关闭StartPage，将其回收，否则按返回键会返回此界面
             }

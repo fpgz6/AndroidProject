@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+       <TextView
+           android:id="@+id/title_text"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_margin="5dp"
+           android:text="欢迎来到OVO系统"
+           android:textColor="#000000"
+           android:textSize="30sp" />
+    <Button
+        android:id="@+id/IMStudent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dip"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:text="我是学生"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+    <Button
+        android:id="@+id/IMTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:textSize="50dp"
+        android:text="我是老师"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
