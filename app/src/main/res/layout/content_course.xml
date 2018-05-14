@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <!--<TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="This is content_course"
-        android:gravity="center"/>-->
-    <Calendar.NewCalendar
-        xmlns:NewCalendarNS="http://schemas.android.com/apk/res/com.example.androidproject"
+    <Calendar.NewCalendar xmlns:NewCalendarNS="http://schemas.android.com/apk/res/com.example.androidproject"
+        android:id="@+id/newCalendar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        NewCalendarNS:dateFormat="MMMM yyyy"
-        android:id="@+id/newCalendar"></Calendar.NewCalendar>
+        android:layout_height="wrap_content"
+        NewCalendarNS:dateFormat="MMMM yyyy"></Calendar.NewCalendar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#22000000"/>
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:text="课程详情"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/course_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
+
 
