@@ -11,16 +11,22 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+import Adapter.CourseAdapter;
 import Calendar.*;
+import Entity.CourseView;
 import Layout.*;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener/*,NewCalendar.NewCalendarListener*/{
@@ -32,8 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView text_teacher;
     private TextView text_course;
     private TextView text_account;
+    /*private List<CourseView> courseViewList=new ArrayList<>();*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
@@ -43,6 +51,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         init();
 
+
+        /*initCourseInfo();
+        CourseAdapter adapter=new CourseAdapter(MainActivity.this,R.layout.course_item,courseViewList);
+        ListView listView=(ListView)findViewById(R.id.list_item);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                CourseView courseView=courseViewList.get(i);
+                Toast.makeText(MainActivity.this,courseView.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
+*/
       /*  NewCalendar calendar =  findViewById(R.id.newCalendar);
         calendar.listener = this;*/
 
@@ -53,6 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this,df.format(day),Toast.LENGTH_SHORT).show();
     }*/
 
+  /*  private void initCourseInfo(){
+        for(int i=0;i<10;i++){
+            CourseView courseView1=new CourseView(R.drawable.apple_pic,"马立新",48,96,"安卓开发",99);
+            courseViewList.add(courseView1);
+        }
+    }*/
 
     private void init() {
         text_teacher = findViewById(R.id.text_teacher);
@@ -106,6 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d("woaini","teacher");
                 replaceFragment(new ContentTeacherLayout());
                 replaceTitle(new TitleLayout());
+
                 teacher.setImageDrawable(getResources().getDrawable(R.drawable.ic_supervisor_account_orange2_a700_24dp));
                 course.setImageDrawable(getResources().getDrawable(R.drawable.ic_book1_grey_500_24dp));
                 account.setImageDrawable(getResources().getDrawable(R.drawable.ic_perm_identity1_grey_500_24dp));
