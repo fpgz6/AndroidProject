@@ -20,11 +20,12 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".ChoiceOption"
             android:label="@string/title_activity_choice_option"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Payment"></activity>
     </application>
 
 </manifest>
