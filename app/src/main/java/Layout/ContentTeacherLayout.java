@@ -1,5 +1,6 @@
 package Layout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import  com.example.androidproject.R;
+import com.example.androidproject.Payment;
+import com.example.androidproject.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,8 +39,11 @@ public class ContentTeacherLayout extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                CourseView courseView=courseViewList.get(i);
-                Toast.makeText(getActivity(),courseView.getName(),Toast.LENGTH_SHORT).show();
+             //   CourseView courseView=courseViewList.get(i);
+            //    Toast.makeText(getActivity(),courseView.getName(),Toast.LENGTH_SHORT).show();
+
+               Intent intent = new Intent(getActivity(),Payment.class);
+                startActivity(intent);
             }
         });
 
