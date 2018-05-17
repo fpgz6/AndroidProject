@@ -12,7 +12,7 @@ import android.widget.TextView;
  * Created by MECHREVO on 2018/4/30.
  */
 
-public class Calendar_day_textView extends TextView {
+public class Calendar_day_textView extends android.support.v7.widget.AppCompatTextView {
     public boolean isToday = false;
     private Paint paint = new Paint();
 

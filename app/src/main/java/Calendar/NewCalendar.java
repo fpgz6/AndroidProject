@@ -61,7 +61,7 @@ public class NewCalendar extends LinearLayout {
         bindControlEvent();
 
 
-        TypedArray ta =getContext().obtainStyledAttributes(attrs, R.styleable.NewCalendar);
+        TypedArray ta =getContext().obtainStyledAttributes(attrs,R.styleable.NewCalendar);
 
 
         try {
@@ -128,18 +128,27 @@ public class NewCalendar extends LinearLayout {
             calendar.add(Calendar.DAY_OF_MONTH,1);
         }
         grid.setAdapter(new CalendarAdapter(getContext(),cells));
-        grid.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
+                if(listener == null){
+                }else{
+                    listener.onItemPress((Date) parent.getItemAtPosition(position));
+                }
+            }
+        });
+        /*grid.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long l) {
                 if(listener == null){
                     return false;
                 }else{
-                    listener.onItemLongPress((Date) parent.getItemAtPosition(position));
+                    listener.onItemPress((Date) parent.getItemAtPosition(position));
                     return  true;
                 }
 
             }
-        });
+        });*/
 
     }
 
@@ -195,7 +204,7 @@ public class NewCalendar extends LinearLayout {
 
 
     public interface NewCalendarListener{
-        void onItemLongPress(Date day);
+        void onItemPress(Date day);
     }
 
 
