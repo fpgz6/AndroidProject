@@ -8,11 +8,11 @@ public class CourseView {
     private int pic_src;
     private String name;
     private double hour_price;
-    private int time;
+    private String  time;
     private String subject;
-    private int comment;
+    private String comment;
 
-    public CourseView(int pic_src, String name, double hour_price, int time, String subject, int comment) {
+    public CourseView(int pic_src, String name, double hour_price, String time, String subject, String comment) {
         this.pic_src = pic_src;
         this.name = name;
         this.hour_price = hour_price;
@@ -33,7 +33,7 @@ public class CourseView {
         return hour_price;
     }
 
-    public int getTime() {
+    public String getTime() {
         return time;
     }
 
@@ -41,7 +41,7 @@ public class CourseView {
         return subject;
     }
 
-    public int getComment() {
+    public String getComment() {
         return comment;
     }
 }

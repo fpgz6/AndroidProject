@@ -2,6 +2,7 @@ package com.example.androidproject;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -63,7 +64,8 @@ public class Payment extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                //在此处跳转到直播界面
+                        Intent intent = new Intent(Payment.this, MainActivity.class);
+                        startActivity(intent);
                     }
                 });
         AlertDialog dialog=builder.create();

@@ -2,8 +2,11 @@ package Layout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +21,10 @@ import java.util.List;
 
 import Adapter.CourseAdapter;
 import Entity.CourseView;
+import Entity.Reservation;
+import util.WebService;
+
+import static util.JsonTool.getAllReservation;
 
 
 /**
@@ -27,12 +34,31 @@ import Entity.CourseView;
 
 public class ContentTeacherLayout extends Fragment {
     @Nullable
+    private String info="";
     private List<CourseView> courseViewList=new ArrayList<>();
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.content_teacher,container,false);
 
         ListView listView=(ListView)view.findViewById(R.id.list_item);
-        initCourseInfo();
+        Thread thread=new Thread(new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                info = WebService.executeHttpGet("reservation.do","get_all_lists");
+            }
+        });
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Log.e("infooooo",info);
+        ArrayList<Reservation> list=getAllReservation("all_lists", info);
+
+
+        initCourseInfo(list);
         CourseAdapter adapter=new CourseAdapter(getActivity(),R.layout.course_item,courseViewList);
 
         listView.setAdapter(adapter);
@@ -50,12 +76,13 @@ public class ContentTeacherLayout extends Fragment {
 
         return view;
 
-
     }
 
-    private void initCourseInfo(){
-        for(int i=0;i<10;i++){
-            CourseView courseView1=new CourseView(R.drawable.apple_pic,"马立新",48,96,"安卓开发",99);
+
+    private void initCourseInfo(ArrayList<Reservation> list){
+        for(int i=0;i<list.size();i++){
+            Reservation r=list.get(i);
+            CourseView courseView1=new CourseView(R.drawable.apple_pic,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
             courseViewList.add(courseView1);
         }
     }
