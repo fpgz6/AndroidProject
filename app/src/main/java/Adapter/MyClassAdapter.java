@@ -1,5 +1,6 @@
 package Adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.androidproject.ChoiceOption;
 import com.example.androidproject.R;
+import com.example.androidproject.StartPage;
+import com.example.androidproject.TeacherDetailTotal;
 
 import java.util.List;
 
@@ -52,7 +56,11 @@ public class MyClassAdapter extends RecyclerView.Adapter<MyClassAdapter.ViewHold
             public void onClick(View view) {
                 int position = holder.getAdapterPosition();
                 MyCourse myCourse = mCourseList.get(position);
-                Toast.makeText(view.getContext(),"you clicked view"+myCourse.getTeacher(),Toast.LENGTH_SHORT).show();;
+                String name = myCourse.getTeacher();
+                Intent intent  = new Intent(holder.myclassView.getContext(),TeacherDetailTotal.class);
+                intent.putExtra("name",name);
+                holder.myclassView.getContext().startActivity(intent);
+               /* Toast.makeText(view.getContext(),"you clicked view"+myCourse.getTeacher(),Toast.LENGTH_SHORT).show();;*/
             }
         });
         return  holder;

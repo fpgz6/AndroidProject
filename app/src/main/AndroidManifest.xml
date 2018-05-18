@@ -25,7 +25,8 @@
             android:name=".ChoiceOption"
             android:label="@string/title_activity_choice_option"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".Payment" />
+        <activity android:name=".TeacherDetailTotal"></activity>
     </application>
 
 </manifest>
