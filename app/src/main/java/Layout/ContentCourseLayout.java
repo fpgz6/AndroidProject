@@ -54,7 +54,7 @@ public class ContentCourseLayout extends Fragment implements NewCalendar.NewCale
 
     private void initMyClass() {
         for(int i=0;i<10;i++){
-            MyCourse courseView1=new MyCourse("马立新","14:00-15:00","安卓开发");
+            MyCourse courseView1=new MyCourse("1","马立新","14:00-15:00","安卓开发");
             myCourseList.add(courseView1);
         }
     }
@@ -63,7 +63,7 @@ public class ContentCourseLayout extends Fragment implements NewCalendar.NewCale
        myCourseList.clear();
 
         for(int i=0;i<10;i++){
-            MyCourse courseView1=new MyCourse("马立","14:00-15:00","安发");
+            MyCourse courseView1=new MyCourse("1","马立","14:00-15:00","安发");
             myCourseList.add(courseView1);
         }
         adapter.notifyDataSetChanged();

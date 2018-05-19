@@ -56,9 +56,9 @@ public class MyClassAdapter extends RecyclerView.Adapter<MyClassAdapter.ViewHold
             public void onClick(View view) {
                 int position = holder.getAdapterPosition();
                 MyCourse myCourse = mCourseList.get(position);
-                String name = myCourse.getTeacher();
+                String teacher_id = myCourse.getTeacher_id();
                 Intent intent  = new Intent(holder.myclassView.getContext(),TeacherDetailTotal.class);
-                intent.putExtra("name",name);
+                intent.putExtra("teacher_id",teacher_id);
                 holder.myclassView.getContext().startActivity(intent);
                /* Toast.makeText(view.getContext(),"you clicked view"+myCourse.getTeacher(),Toast.LENGTH_SHORT).show();;*/
             }

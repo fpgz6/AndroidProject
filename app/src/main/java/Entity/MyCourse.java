@@ -5,11 +5,13 @@ package Entity;
  */
 
 public class MyCourse {
+        private String teacher_id;
         private String teacher;
         private String time;
         private String type;
-        public MyCourse(String name, String time, String subject) {
-            this.teacher = name;
+        public MyCourse(String teacher_id, String teacher_name, String time, String subject) {
+            this.teacher_id = teacher_id;
+            this.teacher = teacher_name;
             this.time = time;
             this.type = subject;
         }
@@ -36,6 +38,14 @@ public class MyCourse {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getTeacher_id() {
+        return teacher_id;
+    }
+
+    public void setTeacher_id(String teacher_id) {
+        this.teacher_id = teacher_id;
     }
 }
 

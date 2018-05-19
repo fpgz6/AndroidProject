@@ -82,6 +82,7 @@
             android:text="老师介绍"
             android:layout_weight="15"/>
             <View
+                android:id="@+id/view_left"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#22000000"
@@ -103,6 +104,7 @@
             android:background="@android:color/transparent"
             android:layout_weight="15"/>
             <View
+                android:id="@+id/view_right"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="#22000000"
