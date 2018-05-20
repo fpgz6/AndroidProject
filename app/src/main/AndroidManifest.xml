@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.androidproject">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".StartPage"
-            android:label="splash">
+            android:label="0V0教学辅导系统">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +27,8 @@
             android:label="@string/title_activity_choice_option"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Payment" />
-        <activity android:name=".TeacherDetailTotal"></activity>
+        <activity android:name=".TeacherDetailTotal" />
+        <activity android:name="com.example.teacher.TeacherActivity"></activity>
     </application>
 
 </manifest>

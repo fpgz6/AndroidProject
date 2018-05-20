@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.teacher.TeacherActivity;
+
 public class ChoiceOption extends AppCompatActivity implements View.OnClickListener{
     private Button teacher;
     private Button student;
@@ -34,6 +36,8 @@ public class ChoiceOption extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.IMTeacher :
+                Intent intent1 = new Intent(ChoiceOption.this, TeacherActivity.class);
+                startActivity(intent1);
                 break;
             default:break;
 

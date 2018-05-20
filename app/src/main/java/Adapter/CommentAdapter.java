@@ -47,7 +47,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
         Comment comment = mCommentList.get(position);
         holder.student_comment_name.setText(comment.getStudent_name());
         holder.student_comment.setText(comment.getComment());
-        holder.student_comment_mark.setText(comment.getMark());
+        holder.student_comment_mark.setText(String.valueOf(comment.getMark()));
 
     }
 

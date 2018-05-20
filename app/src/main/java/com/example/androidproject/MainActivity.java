@@ -40,34 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         init();
 
 
-        /*initCourseInfo();
-        CourseAdapter adapter=new CourseAdapter(MainActivity.this,R.layout.course_item,courseViewList);
-        ListView listView=(ListView)findViewById(R.id.list_item);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                CourseView courseView=courseViewList.get(i);
-                Toast.makeText(MainActivity.this,courseView.getName(),Toast.LENGTH_SHORT).show();
-            }
-        });
-*/
-      /*  NewCalendar calendar =  findViewById(R.id.newCalendar);
-        calendar.listener = this;*/
-
 
     }
-    /*public void onItemLongPress(Date day) {
-        DateFormat df = SimpleDateFormat.getDateInstance();
-        Toast.makeText(this,df.format(day),Toast.LENGTH_SHORT).show();
-    }*/
-
-  /*  private void initCourseInfo(){
-        for(int i=0;i<10;i++){
-            CourseView courseView1=new CourseView(R.drawable.apple_pic,"马立新",48,96,"安卓开发",99);
-            courseViewList.add(courseView1);
-        }
-    }*/
 
     private void init() {
         text_teacher = findViewById(R.id.text_teacher);
