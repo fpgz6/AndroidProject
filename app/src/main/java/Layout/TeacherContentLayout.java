@@ -52,8 +52,8 @@ public class TeacherContentLayout extends Fragment{
                 }
                 if ((currentTime.getTime() - strbeginDate.getTime()) > 0 && (strendDate.getTime() - currentTime.getTime()) > 0) {//使用.getTime方法把时间转化成毫秒数,然后进行比较
                     Intent intent = new Intent(getContext(), StartActivity.class);
-                    String rtmpUrl ="rtmp://45.76.25.111:1935/live";
-                    intent .putExtra("rtmpUrl", rtmpUrl);
+                    String id ="student";
+                    intent .putExtra("id", id);
                     startActivity(intent);
                 }
                 else{

@@ -18,8 +18,11 @@ public class Payment extends AppCompatActivity {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-        TextView textView1 = (TextView) findViewById(R.id.teacher); textView1.setText("李老师");
-        TextView textView2 = (TextView) findViewById(R.id.needmoney); textView2.setText("100元");
+        Intent intent = getIntent();
+        String teacher_id=intent.getStringExtra("teacher_id");
+        String str_price=intent.getStringExtra("str_price");
+        TextView textView1 = (TextView) findViewById(R.id.teacher); textView1.setText(teacher_id);
+        TextView textView2 = (TextView) findViewById(R.id.needmoney); textView2.setText(str_price);
         initEvent();
     }
     private void initEvent() {

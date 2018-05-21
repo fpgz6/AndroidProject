@@ -1,6 +1,7 @@
 package Adapter;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,6 +21,8 @@ import java.util.List;
 
 import Entity.Teacher;
 import Entity.TeacherClass;
+import io.vov.vitamio.utils.Log;
+import rtmppush.hx.com.rtmppush.StartActivity;
 
 /**
  * Created by MECHREVO on 2018/5/20.
@@ -53,16 +56,18 @@ public class TeacherCourseAdapter extends RecyclerView.Adapter<TeacherCourseAdap
                 .inflate(R.layout.teacher_information_couser_item,parent,false);
         final ViewHolder holder = new ViewHolder(view);
         holder.TeacherView.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
                 int position = holder.getAdapterPosition();
                 TeacherClass teacherClass = mTeacherClassList.get(position);
                 Date currentTime = new Date();//currentTime就是系统当前时间
                 DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String strBeginTime="2019-01-01 00:00:00";
+                String strBeginTime="2018-01-01 00:00:00";
                 String strEndTime="2019-01-01 00:00:00";
                 Date strbeginDate = null;//起始时间
                 Date strendDate = null;//结束时间
+                Log.d("1234","1234");
                 try {
                     strbeginDate = fmt.parse(strBeginTime.toString());//将时间转化成相同格式的Date类型
                     strendDate = fmt.parse(strEndTime.toString());
@@ -70,7 +75,10 @@ public class TeacherCourseAdapter extends RecyclerView.Adapter<TeacherCourseAdap
                     e.printStackTrace();
                 }
                 if ((currentTime.getTime() - strbeginDate.getTime()) > 0 && (strendDate.getTime() - currentTime.getTime()) > 0) {//使用.getTime方法把时间转化成毫秒数,然后进行比较
-                    //跳转到直播界面
+                    Intent intent = new Intent(view.getContext(), StartActivity.class);
+                    String id ="teacher";
+                    intent .putExtra("id", id);
+                    view.getContext().startActivity(intent);
                 }
                 else{
 

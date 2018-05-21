@@ -19,8 +19,10 @@ public class StartActivity extends Activity {
         @Override
         public void onClick(View arg0) {
             Intent i = new Intent(StartActivity.this, MActivity.class);
+            Intent intent = getIntent();
+            String rtmpUrl="rtmp://45.76.205.111:1935/live/"+intent.getStringExtra("id");
            // String rtmpUrl = _rtmpUrlEditText.getText().toString();
-            String rtmpUrl="rtmp://45.76.205.111:1935/live";
+          //  String rtmpUrl="rtmp://45.76.205.111:1935/live";
             i.putExtra(StartActivity.RTMPURL_MESSAGE, rtmpUrl);
             StartActivity.this.startActivity(i);
         }

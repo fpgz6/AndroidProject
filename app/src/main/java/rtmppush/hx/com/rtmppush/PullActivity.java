@@ -40,7 +40,7 @@ public class PullActivity extends Fragment {
         Log.d("Right","onCreateView");
 
         mVideoView = (VideoView) view.findViewById(R.id.vitamio_videoView);
-        path = "rtmp://45.76.205.111:1935/live";
+        path = "rtmp://45.76.205.111:1935/live/teacher";
 
        // mVideoView.setVideoPath(path);
 
