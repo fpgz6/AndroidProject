@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
+            "outputFile": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "source": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
@@ -17,26 +17,10 @@
             ]
         },
         {
-            "outputFile": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v14_values-v14.arsc.flat",
+            "outputFile": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v11_values-v11.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-v14\\values-v14.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "201"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v11_values-v11.arsc.flat",
-            "map": [
-                {
-                    "source": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-v11\\values-v11.xml",
+                    "source": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -49,10 +33,26 @@
             ]
         },
         {
-            "outputFile": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-w820dp-v13_values-w820dp-v13.arsc.flat",
+            "outputFile": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-v14_values-v14.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "source": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "201"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\res\\merged\\androidTest\\debug\\values-w820dp-v13_values-w820dp-v13.arsc.flat",
+            "map": [
+                {
+                    "source": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

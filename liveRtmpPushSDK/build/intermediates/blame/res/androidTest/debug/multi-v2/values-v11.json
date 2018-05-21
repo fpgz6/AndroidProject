@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v11\\values-v11.xml",
+            "outputFile": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v11\\values-v11.xml",
             "map": [
                 {
-                    "source": "E:\\Android\\AndroidProject3\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-v11\\values-v11.xml",
+                    "source": "E:\\Android\\AndroidProject\\liveRtmpPushSDK\\build\\intermediates\\packaged_res\\debug\\values-v11\\values-v11.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
