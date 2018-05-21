@@ -24,6 +24,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
+import Entity.Reservation;
+import util.JsonTool;
+import util.WebService;
+
 /**
  * Created by MECHREVO on 2018/4/30.
  */
@@ -155,11 +159,30 @@ public class NewCalendar extends LinearLayout {
 
     private class CalendarAdapter extends ArrayAdapter<Date>{
 
+        private String info="";
+
         LayoutInflater inflater;
 
+        ArrayList<Reservation> list;
         public CalendarAdapter(@NonNull Context context,ArrayList<Date> days) {
             super(context, R.layout.calendar_text_day,days);
             inflater = LayoutInflater.from(context);
+            Thread thread=new Thread(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    info= WebService.executeHttpGetP1s("reservation.do", "get_list_by_sid" ,"S001");
+
+                }
+            });
+            thread.start();
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            /*ArrayList<Reservation> */list= JsonTool.getAllReservation("s_lists",info);
         }
 
         @NonNull
@@ -191,11 +214,25 @@ public class NewCalendar extends LinearLayout {
                 }else{
                     ((TextView)convertView).setTextColor(Color.parseColor("#666666"));
                 }
-                if(now.getDate() == date.getDate() && now.getMonth() == date.getMonth() && now.getYear() == date.getYear()){
+
+
+
+                for(int i = 0;i<list.size();i++){
+
+                    SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMdd");
+                    String str=sdf.format(date);
+                    if(str.equals(list.get(i).getDate())){
+
+                        ((TextView)convertView).setTextColor(Color.parseColor("#ff0000"));
+                        ((Calendar_day_textView)convertView).isToday = true;
+                    }
+                }
+
+                /*if(now.getDate() == date.getDate() && now.getMonth() == date.getMonth() && now.getYear() == date.getYear()){
 
                     ((TextView)convertView).setTextColor(Color.parseColor("#ff0000"));
                     ((Calendar_day_textView)convertView).isToday = true;
-                }
+                }*/
 
             }
             return convertView;

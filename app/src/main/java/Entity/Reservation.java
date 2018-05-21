@@ -85,6 +85,7 @@ public class Reservation {
     private int mark;//评分
     private int status;//状态字
 
+    private String t_name;
 
     public String getId() {
         return id;
@@ -92,5 +93,13 @@ public class Reservation {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getT_name() {
+        return t_name;
+    }
+
+    public void setT_name(String t_name) {
+        this.t_name = t_name;
     }
 }

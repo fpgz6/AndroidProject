@@ -21,6 +21,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import rtmppush.hx.com.rtmppush.MActivity;
+import rtmppush.hx.com.rtmppush.StartActivity;
+
 /**
  * Created by MECHREVO on 2018/5/17.
  */
@@ -37,7 +40,7 @@ public class TeacherContentLayout extends Fragment{
             public void onClick(View v) {
                 Date currentTime = new Date();//currentTime就是系统当前时间
                 DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                String strBeginTime="2019-01-01 00:00:00";
+                String strBeginTime="2018-01-01 00:00:00";
                 String strEndTime="2019-01-01 00:00:00";
                 Date strbeginDate = null;//起始时间
                 Date strendDate = null;//结束时间
@@ -48,7 +51,10 @@ public class TeacherContentLayout extends Fragment{
                     e.printStackTrace();
                 }
                 if ((currentTime.getTime() - strbeginDate.getTime()) > 0 && (strendDate.getTime() - currentTime.getTime()) > 0) {//使用.getTime方法把时间转化成毫秒数,然后进行比较
-                    //跳转到直播界面
+                    Intent intent = new Intent(getContext(), StartActivity.class);
+                    String rtmpUrl ="rtmp://45.76.25.111:1935/live";
+                    intent .putExtra("rtmpUrl", rtmpUrl);
+                    startActivity(intent);
                 }
                 else{
                     showDialog();

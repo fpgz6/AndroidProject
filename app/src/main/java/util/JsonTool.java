@@ -37,6 +37,7 @@ public class JsonTool {
                 reservation.setComment(jsonObject2.getString("comment"));
                 reservation.setMark(jsonObject2.getInt("mark"));
                 reservation.setStatus(jsonObject2.getInt("status"));
+                reservation.setT_name(jsonObject2.getString("t_name"));
                 list.add(reservation);
             }
         } catch (JSONException e) {
@@ -65,6 +66,7 @@ public class JsonTool {
                 reservation.setComment(jsonObject2.getString("comment"));
                 reservation.setMark(jsonObject2.getInt("mark"));
                 reservation.setStatus(jsonObject2.getInt("status"));
+                reservation.setT_name(jsonObject2.getString("t_name"));
             }
         } catch (JSONException e) {
             // TODO Auto-generated catch block

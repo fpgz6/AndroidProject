@@ -45,7 +45,7 @@ public class ContentTeacherLayout extends Fragment {
             @Override
             public void run()
             {
-                info = WebService.executeHttpGet("reservation.do","get_all_lists");
+                info = WebService.executeHttpGet("reservation.do","get_all_list");
             }
         });
         thread.start();
@@ -54,7 +54,7 @@ public class ContentTeacherLayout extends Fragment {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        Log.e("infooooo",info);
+        //Log.e("infooooo",info);
         ArrayList<Reservation> list=getAllReservation("all_lists", info);
 
 
