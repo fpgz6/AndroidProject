@@ -96,10 +96,25 @@ public class ContentTeacherLayout extends Fragment {
 
 
     private void initCourseInfo(ArrayList<Reservation> list){
-        for(int i=0;i<list.size();i++){
+        Reservation r=list.get(0);
+        CourseView courseView1=new CourseView(R.drawable.photo1,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
+        courseViewList.add(courseView1);
+        r=list.get(1);
+        CourseView courseView2=new CourseView(R.drawable.photo2,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
+        courseViewList.add(courseView2);
+        r=list.get(2);
+        CourseView courseView3=new CourseView(R.drawable.photo3,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
+        courseViewList.add(courseView3);
+        r=list.get(3);
+        CourseView courseView4=new CourseView(R.drawable.photo4,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
+        courseViewList.add(courseView4);
+        r=list.get(4);
+        CourseView courseView5=new CourseView(R.drawable.photo5,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
+        courseViewList.add(courseView5);
+       /* for(int i=0;i<list.size();i++){
             Reservation r=list.get(i);
-            CourseView courseView1=new CourseView(R.drawable.apple_pic,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
+            CourseView courseView1=new CourseView(R.drawable.photo1,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
             courseViewList.add(courseView1);
-        }
+        }*/
     }
 }
