@@ -1,4 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">0V0教学辅导系统</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">输入手机号</string>
+    <string name="prompt_password">输入密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="action_register">注册</string>
+    <string name="action_forget">忘记密码</string>
+    <string name="error_invalid_email">手机号格式错误</string>
+    <string name="error_invalid_phone">手机号不存在 或者 密码错误</string>
+    <string name="error_invalid_register">注册失败！账户已存在</string>
+    <string name="error_invalid_password">密码太短</string>
+    <string name="error_incorrect_password">密码错误</string>
+    <string name="error_field_required">此处需要填写</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- 忘记密码页面 -->
+    <string name="submit">提交</string>
+
+    <!-- 我的页面 -->
+    <string name="me">我的</string>
+    <string name="login">点击登录</string>
+    <string name="nothing"></string>
+    <string name="order">我的订单</string>
+    <string name="signout">退出登录</string>
+
+    <!-- 我的信息修改页面 -->
+    <string name="info_id">账户</string>
+    <string name="info_hint_id">这是您的账户</string>
+    <string name="info_password">密码</string>
+    <string name="info_hint_password">请输入您的密码</string>
+    <string name="info_name">姓名</string>
+    <string name="info_hint_name">请输入您的姓名</string>
+    <string name="info_gender">性别</string>
+    <string name="info_hint_gender">请输入您的性别</string>
+    <string name="info_age">年龄</string>
+    <string name="info_hint_age">请输入您的年龄</string>
+    <string name="info_grade">年级</string>
+    <string name="info_hint_grade">请输入您的年级</string>
+    <string name="title_activity_order">OrderActivity</string>
+
+    <!-- 我的订单修改页面 -->
+    <string name="order_id">订单编号</string>
+    <string name="order_hint_id">这是订单编号</string>
+    <string name="order_date">日期</string>
+    <string name="order_period">时段</string>
+    <string name="order_content">内容</string>
+    <string name="order_price">价格</string>
+    <string name="order_comment">评论</string>
+    <string name="order_mark">评分</string>
+    <string name="confirm">确认</string>
+    <string name="title_activity_login2">Login</string>
+
 </resources>

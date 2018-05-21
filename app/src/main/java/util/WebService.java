@@ -172,4 +172,52 @@ public class WebService {
         inStream.close();
         return outputStream.toByteArray();
     }
+
+    public static String executeHttpGetP3s(String url,String status,String id,String password ) {
+        HttpURLConnection conn = null;
+        InputStream is = null;
+
+        try {
+            // 用户名 密码
+            // URL 地址
+            String path = "http://" + IP + "/";
+            path = path + url + "?status="+status+"&id=" + id+"&password="+password;
+            Log.e("urlllllllllllll",path);
+            conn = (HttpURLConnection) new URL(path).openConnection();
+            conn.setConnectTimeout(30000); // 设置超时时间
+            conn.setReadTimeout(30000);
+            conn.setDoInput(true);
+            conn.setRequestMethod("GET"); // 设置获取信息方式
+            conn.setRequestProperty("Charset", "UTF-8"); // 设置接收数据编码格式
+
+            Log.e("连接输入完成","11111");
+            if (conn.getResponseCode() == 200) {
+                is = conn.getInputStream();
+                Log.e("连接200","11111");
+                return parseInfo(is);
+            }
+            return null;
+
+        }catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // 意外退出时进行连接关闭保护
+            if (conn != null) {
+                conn.disconnect();
+            }
+            if (is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+        return "服务器连接超时...";
+    }
+
+
+
+
 }

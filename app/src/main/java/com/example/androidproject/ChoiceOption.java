@@ -9,9 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.Freedom.Login2Activity;
+import com.example.Freedom.MeActivity;
+import com.example.Freedom.UserSession;
 import com.example.teacher.TeacherActivity;
 
 public class ChoiceOption extends AppCompatActivity implements View.OnClickListener{
+
+    // session 相关
+    private UserSession usersession;
+
     private Button teacher;
     private Button student;
 
@@ -32,11 +39,15 @@ public class ChoiceOption extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.IMStudent :
-                Intent intent = new Intent(ChoiceOption.this, MainActivity.class);
+                usersession = (UserSession) getApplicationContext();
+                usersession.setPerson("student");
+                Intent intent = new Intent(ChoiceOption.this, Login2Activity.class);
                 startActivity(intent);
                 break;
             case R.id.IMTeacher :
-                Intent intent1 = new Intent(ChoiceOption.this, TeacherActivity.class);
+                usersession = (UserSession) getApplicationContext();
+                usersession.setPerson("teacher");
+                Intent intent1 = new Intent(ChoiceOption.this, Login2Activity.class);
                 startActivity(intent1);
                 break;
             default:break;
