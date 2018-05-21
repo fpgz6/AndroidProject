@@ -11,6 +11,8 @@ public class UserSession extends Application{
     private String password;
     private String person;
 
+    private Boolean allItem[];
+
 
 
     public String getUsername() {
@@ -35,5 +37,13 @@ public class UserSession extends Application{
 
     public void setPerson(String person) {
         this.person = person;
+    }
+
+    public Boolean[] getAllItem() {
+        return allItem;
+    }
+
+    public void setAllItem(Boolean[] allItem) {
+        this.allItem = allItem;
     }
 }

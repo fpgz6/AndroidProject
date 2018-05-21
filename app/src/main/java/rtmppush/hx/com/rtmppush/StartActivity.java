@@ -20,6 +20,9 @@ public class StartActivity extends Activity {
         public void onClick(View arg0) {
             Intent i = new Intent(StartActivity.this, MActivity.class);
             Intent intent = getIntent();
+            String id=intent.getStringExtra("id");
+            if(!id.equals("T001"))id="S001";
+
             String rtmpUrl="rtmp://45.76.205.111:1935/live/"+intent.getStringExtra("id");
            // String rtmpUrl = _rtmpUrlEditText.getText().toString();
           //  String rtmpUrl="rtmp://45.76.205.111:1935/live";

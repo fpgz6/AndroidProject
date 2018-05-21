@@ -62,7 +62,7 @@ public class TeacherClassLayout extends Fragment {
         Log.e("返回",info);
         for(int i = 0;i<list.size(); i++){
             Reservation r=list.get(i);
-            TeacherClass courseView1=new TeacherClass(r.getContent(),r.getDate(),"period"+r.getPeriod());
+            TeacherClass courseView1=new TeacherClass(r.getContent(),r.getDate(),String.valueOf(r.getPeriod()));
             teacherClasseList.add(courseView1);
         }
     }

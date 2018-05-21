@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.Freedom.UserSession;
 import com.example.androidproject.MainActivity2;
 import com.example.androidproject.Payment;
 import com.example.androidproject.R;
@@ -34,6 +35,12 @@ import static util.JsonTool.getAllReservation;
 
 public class ContentTeacherLayout extends Fragment {
     @Nullable
+
+    // session 相关
+    private UserSession usersession;
+
+    private Boolean allItem[];
+
     private String info="";
     private List<CourseView> courseViewList=new ArrayList<>();
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, Bundle savedInstanceState) {
@@ -111,6 +118,11 @@ public class ContentTeacherLayout extends Fragment {
         r=list.get(4);
         CourseView courseView5=new CourseView(R.drawable.photo5,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());
         courseViewList.add(courseView5);
+
+
+        usersession = (UserSession) getActivity().getApplicationContext();
+        allItem = usersession.getAllItem();
+
        /* for(int i=0;i<list.size();i++){
             Reservation r=list.get(i);
             CourseView courseView1=new CourseView(R.drawable.photo1,r.getTeacher_id(),r.getPrice(),r.getDate(),r.getContent(),r.getComment());

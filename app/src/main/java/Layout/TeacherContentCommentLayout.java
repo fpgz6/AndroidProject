@@ -57,6 +57,8 @@ private String info;
                 String strEndTime="2019-01-01 00:00:00";
                 Date strbeginDate = null;//起始时间
                 Date strendDate = null;//结束时间
+                Intent intent=getActivity().getIntent();
+                String teacher_id="T001";
                 io.vov.vitamio.utils.Log.d("1234","1234");
                 try {
                     strbeginDate = fmt.parse(strBeginTime.toString());//将时间转化成相同格式的Date类型
@@ -65,10 +67,9 @@ private String info;
                     e.printStackTrace();
                 }
                 if ((currentTime.getTime() - strbeginDate.getTime()) > 0 && (strendDate.getTime() - currentTime.getTime()) > 0) {//使用.getTime方法把时间转化成毫秒数,然后进行比较
-                    Intent intent = new Intent(view.getContext(), StartActivity.class);
-                    String id="student";
-                    intent .putExtra("id",id);
-                    view.getContext().startActivity(intent);
+                    Intent intent1 = new Intent(view.getContext(), StartActivity.class);
+                    intent1 .putExtra("id",teacher_id);
+                    view.getContext().startActivity(intent1);
                 }
                 else{
 

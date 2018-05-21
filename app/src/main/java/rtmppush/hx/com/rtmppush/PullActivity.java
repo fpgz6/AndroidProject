@@ -14,6 +14,8 @@ import io.vov.vitamio.LibsChecker;
 import io.vov.vitamio.MediaPlayer;
 import io.vov.vitamio.widget.MediaController;
 import io.vov.vitamio.widget.VideoView;
+
+import com.example.Freedom.UserSession;
 import com.example.androidproject.R;
 
 /**
@@ -29,7 +31,9 @@ public class PullActivity extends Fragment {
     private Activity activity;
     private TextView textView;
 
-
+    // session 相关
+    private UserSession usersession;
+    private String id;
 
 
     @Nullable
@@ -39,8 +43,12 @@ public class PullActivity extends Fragment {
 
         Log.d("Right","onCreateView");
 
+        usersession = (UserSession) view.getContext().getApplicationContext();
+        id = usersession.getUsername();
+if(!id.equals("T001")){id="S001";}
         mVideoView = (VideoView) view.findViewById(R.id.vitamio_videoView);
-        path = "rtmp://45.76.205.111:1935/live/teacher";
+        path = "rtmp://45.76.205.111:1935/live/"+id;
+        Log.d("Right",path);
 
        // mVideoView.setVideoPath(path);
 

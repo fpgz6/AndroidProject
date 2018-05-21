@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import com.example.androidproject.MainActivity;
 import com.example.androidproject.R;
+import com.example.teacher.TeacherActivity;
 
 import util.WebService;
 
@@ -65,14 +66,22 @@ public class Login2Activity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
+Log.e("2222222222222222",result);
                 if (result.equals("1")) {
                     usersession = (UserSession) getApplicationContext();
+                    Log.e("2222222222222222",phone);
                     usersession.setUsername(phone);
                     usersession.setPassword(password);
 
-                    Intent intent = new Intent(Login2Activity.this,MainActivity.class);
-                    startActivity(intent);
+                    if(person.equals("student")){
+                        Intent intent = new Intent(Login2Activity.this,MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Intent intent = new Intent(Login2Activity.this,TeacherActivity.class);
+                        startActivity(intent);
+                    }
+
                 }
                 else if (result.equals("0")) {
                     mphone.setError(getString(R.string.error_invalid_phone));
@@ -113,8 +122,16 @@ public class Login2Activity extends AppCompatActivity {
                     usersession.setUsername(phone);
                     usersession.setPassword(password);
 
-                    Intent intent = new Intent(Login2Activity.this,MainActivity.class);
-                    startActivity(intent);
+                    if(person.equals("student")){
+                        Intent intent = new Intent(Login2Activity.this,MainActivity.class);
+                        startActivity(intent);
+                    }
+                    else {
+                        Intent intent = new Intent(Login2Activity.this,TeacherActivity.class);
+                        startActivity(intent);
+                    }
+
+
                 }
                 else if (result.equals("0")) {
                     mphone.setError(getString(R.string.error_invalid_register));

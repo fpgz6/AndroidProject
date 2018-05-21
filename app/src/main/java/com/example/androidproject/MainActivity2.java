@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.Freedom.UserSession;
 import com.example.androidproject.R;
 
 import java.util.ArrayList;
@@ -18,6 +19,9 @@ import java.util.List;
 import io.vov.vitamio.utils.Log;
 
 public class MainActivity2 extends AppCompatActivity {
+
+    // session 相关
+    private UserSession usersession;
 
     private CheckBox[] checkbox = new CheckBox[16];
     private RadioButton man, woman;
@@ -86,6 +90,10 @@ public class MainActivity2 extends AppCompatActivity {
                         allItem[i] = false;
                     }
                 }
+
+                usersession = (UserSession) getApplicationContext();
+                usersession.setAllItem(allItem);
+
                 Intent intent = new Intent(MainActivity2.this,MainActivity.class);
                 startActivity(intent);
 
