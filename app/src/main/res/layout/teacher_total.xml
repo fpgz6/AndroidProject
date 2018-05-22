@@ -18,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/apple_pic"/>
+            android:src="@drawable/photo1"/>
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:textSize="30dp"
-                android:text="教师姓名"
+                android:text="Mike"
                 android:gravity="center"/>
             <TextView
                 android:id="@+id/teacher_information_subject"
@@ -38,7 +38,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:textSize="30dp"
-                android:text="专业"
+                android:text="数学"
                 android:gravity="center"/>
         </LinearLayout>
         <LinearLayout

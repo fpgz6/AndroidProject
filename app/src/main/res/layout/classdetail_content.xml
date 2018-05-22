@@ -11,44 +11,54 @@
         android:textColor="#000000"
         android:textStyle="bold"/>
     <TextView
+        android:text="性别"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+    <TextView
         android:id="@+id/detail_teacher_gender"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="男"/>
+        android:textSize="20dp"
+        android:text="女"/>
     <TextView
-
+        android:text="年龄"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="0.5"/>
     <TextView
         android:id="@+id/detail_teacher_age"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:textSize="20dp"
         android:text="21"/>
     <TextView
+        android:text="地区"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="0.5" />
     <TextView
         android:id="@+id/detail_teacher_place"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:textSize="20dp"
         android:text="四川成都"/>
     <TextView
+        android:text="科目"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="0.5" />
     <TextView
         android:id="@+id/detail_teacher_subject"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:textSize="20dp"
         android:layout_weight="1"
         android:text="高数-无穷级数"/>
     <TextView
-
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
@@ -63,7 +73,7 @@
             android:layout_weight="1"
             android:textColor="#FFAA33"
             android:gravity="center"
-            android:text="￥时薪/课时"/>
+            android:text="￥200/课时"/>
         <Button
             android:id="@+id/start_class"
             android:background="#FFAA33"

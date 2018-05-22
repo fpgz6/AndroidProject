@@ -15,8 +15,8 @@ import java.net.URL;
 import Entity.Teacher;
 
 public class WebService {
-   // private static String IP = "45.76.205.111:8080/OVO";
-   private static String IP = "192.168.1.114:8080";
+   private static String IP = "45.76.205.111:8080/OVO";
+   //private static String IP = "192.168.1.114:8080";
     //把TOMCATURL改为你的服务地址
 
     /**

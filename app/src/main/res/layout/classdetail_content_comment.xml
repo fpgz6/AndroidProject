@@ -23,7 +23,7 @@
             android:layout_weight="1"
             android:textColor="#FFAA33"
             android:gravity="center"
-            android:text="￥时薪/课时"/>
+            android:text="￥200/课时"/>
         <Button
             android:id="@+id/start_comment_class"
             android:background="#FFAA33"

@@ -98,14 +98,14 @@
             android:layout_weight="1"
             android:layout_height="20dp"
             android:gravity="center_horizontal"
-            android:text="共授小时"/>
+            android:text="授课日期"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="20dp"
             android:gravity="center_horizontal"
-            android:text="好评率"/>
+            android:text="评价"/>
     </LinearLayout>
 
 
